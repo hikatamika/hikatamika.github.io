@@ -1,0 +1,77 @@
+<!doctype html>
+<html class="no-js" lang="en-us">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>HK★TMK: Tamika P. Designer and Illustrator</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <!-- Place favicon.ico in the root directory -->
+
+  <script src="js/vendor/modernizr-3.6.0.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.3.1.min.js"><\/script>')</script>
+  <script src="js/plugins.js"></script>
+  <script src="js/main.js"></script>
+
+  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+  <script>
+    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+    ga('create', 'UA-XXXXX-Y', 'auto'); ga('send', 'pageview')
+  </script>
+  <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+
+  <!-- Card Flip -->
+  <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+  <script src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js"></script>
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+  <!-- Add your site or application content here -->
+  <div id="site">
+    <div id="header">
+      <div id="logo-box">
+        <img class="header-logo logo-full" alt="HK★TMK" src="img/placeholderlogo.png">
+      </div>
+    </div>
+    <div id="page">
+      <div id="cardbox">
+        <div id="card">
+          <div class="front">
+            <img class="cardimg" alt="Card Front" src="img/card-placeholder.png">
+          </div>
+          <div class="back">
+            <img class="cardimg" alt="Card Front" src="img/card-placeholder2.png">
+          </div>
+        </div>
+        <script>
+          $("#card").flip({
+            trigger: 'manual'
+          });
+          $("#toggle-btn").click(function(){
+            $("#card").flip('toggle');
+          });
+        </script>
+      </div>
+      <div id="navbox">
+        <ul class="star-links">
+          <a href=""><li><img class="star-bullets" alt="" src="img/star.svg">News</li></a>
+          <a href=""><li><img class="star-bullets" alt="" src="img/star.svg">Work</li></a>
+          <a href=""><li><img class="star-bullets" alt="" src="img/star.svg">Portfolio</li></a>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!--[if lte IE 9]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+  <![endif]-->
+</body>
+
+</html>

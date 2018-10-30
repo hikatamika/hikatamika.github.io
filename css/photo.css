@@ -1,0 +1,1283 @@
+/* Copyright 2018 Tamika "HK*TMK" P. All rights reserved. */
+/*! Typebase.less v0.1.0 | MIT License */
+/* Variables */
+/* line 38, D:/HKTMK/hktmk-site/scss/photo.scss */
+#logo-box, #cardbox, #card, #navbox, #footer {
+  text-align: center;
+}
+
+/* line 42, D:/HKTMK/hktmk-site/scss/photo.scss */
+#logo-box, #cardbox, #navbox, ul.navbar-nav {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* line 47, D:/HKTMK/hktmk-site/scss/photo.scss */
+#logo-box img {
+  -webkit-user-select: none;
+  /* Chrome all / Safari all */
+  -moz-user-select: none;
+  /* Firefox all */
+  -ms-user-select: none;
+  /* IE 10+ */
+  -o-user-select: none;
+  user-select: none;
+}
+
+/* line 55, D:/HKTMK/hktmk-site/scss/photo.scss */
+#cardbutton, #cardbutton:hover {
+  transform-origin: 50% 55%;
+}
+
+/* line 59, D:/HKTMK/hktmk-site/scss/photo.scss */
+.cardimg {
+  max-width: 61.33333vw;
+  max-height: 47vh;
+}
+
+/* line 64, D:/HKTMK/hktmk-site/scss/photo.scss */
+.cover-logo, .page-logo {
+  height: 100%;
+  width: 100%;
+}
+
+/* line 69, D:/HKTMK/hktmk-site/scss/photo.scss */
+.dropdown-item h3, .dropdown-item h4 {
+  font-size: 100%;
+  border-bottom: none;
+  font-weight: normal;
+  font-family: "Raleway", sans-serif;
+  margin-top: 0;
+}
+
+/* line 77, D:/HKTMK/hktmk-site/scss/photo.scss */
+#port-cover-grid, #port-cate-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+/* line 83, D:/HKTMK/hktmk-site/scss/photo.scss */
+.port-cate-thumb.pct-port > .inner, .port-cate-thumb.pct-land > .inner, .port-cate-thumb.pct-sq > .inner {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1em;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  color: white;
+  opacity: 0;
+  -webkit-transition: opacity .5s ease;
+  transition: opacity .5s ease;
+}
+
+/* line 100, D:/HKTMK/hktmk-site/scss/photo.scss */
+.port-cate-thumb.pct-port > .inner h2, .port-cate-thumb.pct-land > .inner h2, .port-cate-thumb.pct-sq > .inner h2 {
+  margin-top: 0;
+  font-weight: 800;
+  font-size: 1.0605rem;
+  line-height: 1.125rem;
+}
+
+/* line 107, D:/HKTMK/hktmk-site/scss/photo.scss */
+.port-cate-thumb.pct-port > .inner:hover, .port-cate-thumb.pct-land > .inner:hover, .port-cate-thumb.pct-sq > .inner:hover {
+  opacity: 1;
+  -webkit-transition: opacity .5s ease;
+  transition: opacity .5s ease;
+}
+
+/* CSS*/
+/* Content */
+/* line 192, D:/HKTMK/hktmk-site/scss/photo.scss */
+body {
+  background-color: #3E3E3E;
+  background-image: url("../img/hk-bg-tile.png");
+  margin: 3vh 4vw 3vh 4vw;
+  width: auto;
+  font-family: "Raleway", sans-serif;
+  color: #333333;
+}
+
+/* line 204, D:/HKTMK/hktmk-site/scss/photo.scss */
+#header h1 {
+  display: none;
+}
+
+/* line 213, D:/HKTMK/hktmk-site/scss/photo.scss */
+.logo-link {
+  margin: 0 auto;
+  display: inline-block;
+}
+
+/* line 218, D:/HKTMK/hktmk-site/scss/photo.scss */
+#logo-box img {
+  display: block;
+}
+
+/* line 223, D:/HKTMK/hktmk-site/scss/photo.scss */
+.cover-logo-box {
+  margin-bottom: 2.66667vmin;
+}
+
+/* line 227, D:/HKTMK/hktmk-site/scss/photo.scss */
+.page-logo-box {
+  margin-bottom: 1.33333vmin;
+}
+
+/* line 231, D:/HKTMK/hktmk-site/scss/photo.scss */
+.cover-logo {
+  max-width: 46vw;
+  max-height: 23.5vh;
+  -o-object-fit: contain;
+  object-fit: contain;
+}
+
+@media (min-width: 900px) {
+  /* line 231, D:/HKTMK/hktmk-site/scss/photo.scss */
+  .cover-logo {
+    max-width: 30.66667vw;
+    max-height: 23.5vh;
+  }
+}
+
+/* line 244, D:/HKTMK/hktmk-site/scss/photo.scss */
+.page-logo {
+  max-width: 69vw;
+  box-sizing: border-box;
+}
+
+@media (min-width: 600px) {
+  /* line 244, D:/HKTMK/hktmk-site/scss/photo.scss */
+  .page-logo {
+    max-width: 46vw;
+  }
+}
+
+@media (min-width: 900px) {
+  /* line 244, D:/HKTMK/hktmk-site/scss/photo.scss */
+  .page-logo {
+    max-width: 46vw;
+  }
+}
+
+@media (min-width: 1200px) {
+  /* line 244, D:/HKTMK/hktmk-site/scss/photo.scss */
+  .page-logo {
+    max-width: 23vw;
+  }
+}
+
+@media (min-width: 1800px) {
+  /* line 244, D:/HKTMK/hktmk-site/scss/photo.scss */
+  .page-logo {
+    max-width: 18.4vw;
+  }
+}
+
+/* line 267, D:/HKTMK/hktmk-site/scss/photo.scss */
+#cover-site {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 94vh;
+}
+
+/* line 278, D:/HKTMK/hktmk-site/scss/photo.scss */
+.container-fluid {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* line 283, D:/HKTMK/hktmk-site/scss/photo.scss */
+#content {
+  background-color: white;
+  padding: 4vw;
+  margin: 3vh auto 3vh auto;
+  -webkit-box-shadow: 0px 2px 12px #000000;
+  -moz-box-shadow: 0px 2px 12px #000000;
+  box-shadow: 0px 2px 12px #000000;
+}
+
+@media (min-width: 1200px) {
+  /* line 283, D:/HKTMK/hktmk-site/scss/photo.scss */
+  #content {
+    padding: 3vw;
+  }
+}
+
+/* line 293, D:/HKTMK/hktmk-site/scss/photo.scss */
+#cardbox {
+  width: fit-content;
+  top: 0;
+  margin-bottom: 2.66667vmin;
+}
+
+/* line 301, D:/HKTMK/hktmk-site/scss/photo.scss */
+#card {
+  position: relative;
+  width: fit-content;
+}
+
+/* line 307, D:/HKTMK/hktmk-site/scss/photo.scss */
+#cardbutton {
+  position: absolute;
+  bottom: 0;
+  right: -9vmin;
+  z-index: 9999999;
+  -webkit-transition: -webkit-transform .6s ease-in-out;
+  transition: transform .6s ease-in-out;
+  cursor: pointer;
+}
+
+/* line 318, D:/HKTMK/hktmk-site/scss/photo.scss */
+#cardbutton:hover {
+  -webkit-transform: rotate(360deg);
+  transform: rotate(360deg);
+}
+
+/* line 324, D:/HKTMK/hktmk-site/scss/photo.scss */
+#cardbutton img {
+  position: relative;
+  height: 6.66667vmin;
+  display: block;
+  width: auto;
+}
+
+/* line 332, D:/HKTMK/hktmk-site/scss/photo.scss */
+.cardimg {
+  display: block;
+  width: auto;
+}
+
+/* line 338, D:/HKTMK/hktmk-site/scss/photo.scss */
+#navbox {
+  height: 100%;
+  width: auto;
+}
+
+/* line 345, D:/HKTMK/hktmk-site/scss/photo.scss */
+.cover-nav-box {
+  margin-top: 1.5vh;
+  margin-bottom: 2.66667vmin;
+}
+
+/* line 350, D:/HKTMK/hktmk-site/scss/photo.scss */
+.navbar {
+  padding: 0;
+}
+
+/* line 354, D:/HKTMK/hktmk-site/scss/photo.scss */
+.navbar-light .navbar-toggler {
+  margin-top: 0;
+  color: #333333;
+  border: 1px solid #A9A9A9;
+}
+
+/* line 360, D:/HKTMK/hktmk-site/scss/photo.scss */
+ul.navbar-nav {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0;
+  padding: 1em;
+  background-color: #F7F7F7;
+  border-radius: 0 0 4px 4px;
+}
+
+@media (min-width: 768px) {
+  /* line 360, D:/HKTMK/hktmk-site/scss/photo.scss */
+  ul.navbar-nav {
+    padding: 0;
+    background-color: transparent;
+    border-radius: 0;
+  }
+}
+
+@media (min-width: 768px) {
+  /* line 375, D:/HKTMK/hktmk-site/scss/photo.scss */
+  .navbar-nav > li {
+    margin-left: 1em;
+    margin-right: 1em;
+  }
+}
+
+/* line 382, D:/HKTMK/hktmk-site/scss/photo.scss */
+li.nav-item.dropdown {
+  margin-bottom: 0.5em;
+}
+
+/* line 386, D:/HKTMK/hktmk-site/scss/photo.scss */
+.dropdown, .pseudo-dropdown {
+  border-bottom: 0.188em dotted #fd669a;
+}
+
+/* line 390, D:/HKTMK/hktmk-site/scss/photo.scss */
+.dropdown-toggle, .pseudo-dropdown a {
+  text-decoration: none !important;
+}
+
+/* line 394, D:/HKTMK/hktmk-site/scss/photo.scss */
+.dropdown-toggle h2, .pseudo-dropdown h2 {
+  font-size: 100%;
+  margin-top: 0;
+  border-bottom: none;
+  display: inline-block;
+  font-family: "Raleway", sans-serif;
+  line-height: 1.5rem;
+}
+
+/* line 403, D:/HKTMK/hktmk-site/scss/photo.scss */
+.dropdown-toggle[aria-expanded="true"]:after {
+  transform: scaleY(-1);
+}
+
+/*for the animation
+.dropdown-toggle:after {
+  transition: 0.5s;
+}*/
+/* line 413, D:/HKTMK/hktmk-site/scss/photo.scss */
+.dropdown-menu {
+  margin-top: 0.5em;
+  margin-bottom: 1em;
+}
+
+/* line 418, D:/HKTMK/hktmk-site/scss/photo.scss */
+.dropdown-item {
+  padding: 0.25rem 1rem;
+}
+
+/* line 422, D:/HKTMK/hktmk-site/scss/photo.scss */
+h3.dropdown-header {
+  padding: 0.25rem 1rem;
+  margin-top: 0;
+  position: relative;
+  border-bottom: none;
+  color: #3E3E3E;
+}
+
+/* line 438, D:/HKTMK/hktmk-site/scss/photo.scss */
+.blog-nav {
+  font-size: 1.7675rem;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+/* line 444, D:/HKTMK/hktmk-site/scss/photo.scss */
+input.search-box {
+  margin-top: 0;
+  display: inline;
+  font-size: 0.94267rem;
+}
+
+/* line 450, D:/HKTMK/hktmk-site/scss/photo.scss */
+.post-tags {
+  margin-top: 0.75rem;
+}
+
+/* line 454, D:/HKTMK/hktmk-site/scss/photo.scss */
+.post-tag {
+  margin-right: 0.25rem;
+}
+
+/* line 458, D:/HKTMK/hktmk-site/scss/photo.scss */
+.tag-divider {
+  margin-left: 0.75rem;
+  margin-right: 0.75rem;
+}
+
+/* line 463, D:/HKTMK/hktmk-site/scss/photo.scss */
+.fa-hashtag {
+  margin-right: 0.255em;
+}
+
+/* line 467, D:/HKTMK/hktmk-site/scss/photo.scss */
+.pagi-nav {
+  font-size: 2.4745rem;
+  margin-top: 1.5rem;
+}
+
+/* line 472, D:/HKTMK/hktmk-site/scss/photo.scss */
+.pagi-left {
+  text-align: left;
+}
+
+/* line 476, D:/HKTMK/hktmk-site/scss/photo.scss */
+.pagi-right {
+  text-align: right;
+}
+
+/* line 480, D:/HKTMK/hktmk-site/scss/photo.scss */
+#port-nav {
+  margin-bottom: 1.5rem;
+}
+
+/* line 484, D:/HKTMK/hktmk-site/scss/photo.scss */
+#port-cover-grid {
+  grid-gap: 1.25vw;
+}
+
+@media (max-width: 599px) {
+  /* line 484, D:/HKTMK/hktmk-site/scss/photo.scss */
+  #port-cover-grid {
+    grid-template-columns: 100%;
+    grid-gap: 0;
+  }
+}
+
+/* line 493, D:/HKTMK/hktmk-site/scss/photo.scss */
+.port-cover-thumb {
+  width: 100%;
+  padding-top: 100%;
+  /* 1:1 Aspect Ratio */
+  position: relative;
+  /* If you want text inside of it */
+  background-image: url("../img/placeholder.png");
+  background-size: contain;
+}
+
+@media (max-width: 599px) {
+  /* line 493, D:/HKTMK/hktmk-site/scss/photo.scss */
+  .port-cover-thumb {
+    padding-top: 50%;
+    background-size: 100% auto;
+    background-position: center;
+  }
+}
+
+/* line 506, D:/HKTMK/hktmk-site/scss/photo.scss */
+span.port-cover-title {
+  position: absolute;
+  bottom: 7.5%;
+  padding-left: 7.5%;
+  right: 7.5%;
+  text-align: right;
+  font-family: "Nunito", sans-serif;
+  font-size: 2vw;
+  font-weight: 700;
+  line-height: 2vw;
+  border-bottom: none;
+}
+
+@media (max-width: 599px) {
+  /* line 506, D:/HKTMK/hktmk-site/scss/photo.scss */
+  span.port-cover-title {
+    font-size: 4vw;
+    line-height: 4vw;
+  }
+}
+
+@media (min-width: 1200px) {
+  /* line 506, D:/HKTMK/hktmk-site/scss/photo.scss */
+  span.port-cover-title {
+    font-size: 1.5vw;
+    line-height: 1.5vw;
+  }
+}
+
+@media (min-width: 2000px) {
+  /* line 506, D:/HKTMK/hktmk-site/scss/photo.scss */
+  span.port-cover-title {
+    font-size: 1.125vw;
+    line-height: 1.125vw;
+  }
+}
+
+/* line 531, D:/HKTMK/hktmk-site/scss/photo.scss */
+#port-cate-grid {
+  grid-gap: 1vw;
+  grid-auto-rows: max-content;
+  grid-auto-flow: row dense;
+}
+
+@media (max-width: 599px) {
+  /* line 531, D:/HKTMK/hktmk-site/scss/photo.scss */
+  #port-cate-grid {
+    grid-template-columns: 100%;
+    row-gap: 1.5rem;
+    column-gap: 0;
+  }
+}
+
+/* line 543, D:/HKTMK/hktmk-site/scss/photo.scss */
+.port-cate-thumb {
+  background-size: cover;
+  background-position: center;
+}
+
+/* line 548, D:/HKTMK/hktmk-site/scss/photo.scss */
+.port-cate-thumb img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+/* line 553, D:/HKTMK/hktmk-site/scss/photo.scss */
+div.port-cate-thumb .inner {
+  background-color: rgba(105, 98, 141, 0.75);
+}
+
+/* line 555, D:/HKTMK/hktmk-site/scss/photo.scss */
+div.port-cate-thumb .inner h2 {
+  border-bottom: 0.188em dotted #fd669a;
+}
+
+/* line 559, D:/HKTMK/hktmk-site/scss/photo.scss */
+div.port-cate-thumb:nth-of-type(even) .inner {
+  background-color: rgba(189, 122, 162, 0.75);
+}
+
+/* line 561, D:/HKTMK/hktmk-site/scss/photo.scss */
+div.port-cate-thumb:nth-of-type(even) .inner h2 {
+  border-bottom: 0.188em dotted #69628D;
+}
+
+/* line 566, D:/HKTMK/hktmk-site/scss/photo.scss */
+.port-cate-thumb.pct-port {
+  grid-column-end: span 1;
+  grid-row-start: span 2;
+  position: relative;
+}
+
+@media (max-width: 599px) {
+  /* line 566, D:/HKTMK/hktmk-site/scss/photo.scss */
+  .port-cate-thumb.pct-port {
+    grid-column-start: 1;
+  }
+}
+
+/* line 573, D:/HKTMK/hktmk-site/scss/photo.scss */
+.port-cate-thumb.pct-port:before {
+  display: block;
+  content: "";
+  width: 100%;
+  padding-top: 200%;
+}
+
+/* line 582, D:/HKTMK/hktmk-site/scss/photo.scss */
+.port-cate-thumb.pct-land {
+  grid-column-end: span 2;
+  grid-row-end: span 1;
+  position: relative;
+}
+
+@media (max-width: 599px) {
+  /* line 582, D:/HKTMK/hktmk-site/scss/photo.scss */
+  .port-cate-thumb.pct-land {
+    grid-column-start: 1;
+  }
+}
+
+/* line 589, D:/HKTMK/hktmk-site/scss/photo.scss */
+.port-cate-thumb.pct-land:before {
+  display: block;
+  content: "";
+  width: 100%;
+  padding-top: 50%;
+}
+
+/* line 598, D:/HKTMK/hktmk-site/scss/photo.scss */
+.port-cate-thumb.pct-sq {
+  grid-row-end: span 1;
+  grid-column-end: span 1;
+  position: relative;
+}
+
+@media (max-width: 599px) {
+  /* line 598, D:/HKTMK/hktmk-site/scss/photo.scss */
+  .port-cate-thumb.pct-sq {
+    grid-column-start: 1;
+  }
+}
+
+/* line 605, D:/HKTMK/hktmk-site/scss/photo.scss */
+.port-cate-thumb.pct-sq:before {
+  display: block;
+  content: "";
+  width: 100%;
+  padding-top: 100%;
+}
+
+/* line 614, D:/HKTMK/hktmk-site/scss/photo.scss */
+#footer {
+  width: 92vw;
+  color: white;
+  text-shadow: 0px 2px 0px black;
+}
+
+/* Fonts */
+/* line 622, D:/HKTMK/hktmk-site/scss/photo.scss */
+.star-links {
+  font-family: "Nunito", sans-serif;
+  font-weight: 800;
+  font-size: 1.5rem;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  display: inline-block;
+  text-shadow: 0px 2px 0px black;
+}
+
+@media (min-width: 2000px) {
+  /* line 622, D:/HKTMK/hktmk-site/scss/photo.scss */
+  .star-links {
+    font-size: 2.25rem;
+  }
+}
+
+/* line 635, D:/HKTMK/hktmk-site/scss/photo.scss */
+a.cover-links {
+  text-decoration: none;
+  border-bottom: 0.188em dotted;
+}
+
+/* line 115, D:/HKTMK/hktmk-site/scss/photo.scss */
+a.cover-links {
+  color: white;
+}
+
+/* line 117, D:/HKTMK/hktmk-site/scss/photo.scss */
+a.cover-links:visited {
+  color: white;
+}
+
+/* line 120, D:/HKTMK/hktmk-site/scss/photo.scss */
+a.cover-links:hover {
+  color: #fd669a;
+}
+
+/* line 123, D:/HKTMK/hktmk-site/scss/photo.scss */
+a.cover-links:active, a.cover-links:focus {
+  color: #bb81fd;
+}
+
+/* line 641, D:/HKTMK/hktmk-site/scss/photo.scss */
+a.cover-links.cover-links-current {
+  text-decoration: none;
+  border-bottom: 0.188em dotted;
+}
+
+/* line 115, D:/HKTMK/hktmk-site/scss/photo.scss */
+a.cover-links.cover-links-current {
+  color: #bb81fd;
+}
+
+/* line 117, D:/HKTMK/hktmk-site/scss/photo.scss */
+a.cover-links.cover-links-current:visited {
+  color: #bb81fd;
+}
+
+/* line 120, D:/HKTMK/hktmk-site/scss/photo.scss */
+a.cover-links.cover-links-current:hover {
+  color: #fd669a;
+}
+
+/* line 123, D:/HKTMK/hktmk-site/scss/photo.scss */
+a.cover-links.cover-links-current:active, a.cover-links.cover-links-current:focus {
+  color: #bb81fd;
+}
+
+/* line 647, D:/HKTMK/hktmk-site/scss/photo.scss */
+a.link-click:active {
+  transform: translateY(0.125em);
+}
+
+/* line 651, D:/HKTMK/hktmk-site/scss/photo.scss */
+.link-click img:active {
+  transform: translateY(0.33333em);
+}
+
+/* line 655, D:/HKTMK/hktmk-site/scss/photo.scss */
+.star-bullets {
+  display: inline;
+  height: 1.5rem;
+  width: auto;
+  vertical-align: middle;
+  margin-right: 0.5rem;
+  padding-bottom: 0.188em;
+}
+
+@media (min-width: 2000px) {
+  /* line 655, D:/HKTMK/hktmk-site/scss/photo.scss */
+  .star-bullets {
+    height: 3rem;
+  }
+}
+
+/* line 667, D:/HKTMK/hktmk-site/scss/photo.scss */
+.oops {
+  color: white;
+  margin-bottom: 2.66667vmin;
+}
+
+/* Setup */
+/* line 673, D:/HKTMK/hktmk-site/scss/photo.scss */
+html {
+  /* Change default typefaces here */
+  font-family: serif;
+  font-size: 100%;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Copy & Lists */
+/* line 688, D:/HKTMK/hktmk-site/scss/photo.scss */
+a {
+  text-decoration: underline;
+}
+
+/* line 115, D:/HKTMK/hktmk-site/scss/photo.scss */
+a {
+  color: #bb81fd;
+}
+
+/* line 117, D:/HKTMK/hktmk-site/scss/photo.scss */
+a:visited {
+  color: #bb81fd;
+}
+
+/* line 120, D:/HKTMK/hktmk-site/scss/photo.scss */
+a:hover {
+  color: #69628D;
+}
+
+/* line 123, D:/HKTMK/hktmk-site/scss/photo.scss */
+a:active, a:focus {
+  color: #fd669a;
+}
+
+/* line 693, D:/HKTMK/hktmk-site/scss/photo.scss */
+a.dropdown-item {
+  text-decoration: none;
+}
+
+/* line 115, D:/HKTMK/hktmk-site/scss/photo.scss */
+a.dropdown-item {
+  color: #333333;
+}
+
+/* line 117, D:/HKTMK/hktmk-site/scss/photo.scss */
+a.dropdown-item:visited {
+  color: #333333;
+}
+
+/* line 120, D:/HKTMK/hktmk-site/scss/photo.scss */
+a.dropdown-item:hover {
+  color: #69628D;
+}
+
+/* line 123, D:/HKTMK/hktmk-site/scss/photo.scss */
+a.dropdown-item:active, a.dropdown-item:focus {
+  color: white;
+}
+
+/* line 130, D:/HKTMK/hktmk-site/scss/photo.scss */
+a.dropdown-item {
+  background-color: white;
+}
+
+/* line 132, D:/HKTMK/hktmk-site/scss/photo.scss */
+a.dropdown-item:visited {
+  background-color: white;
+}
+
+/* line 135, D:/HKTMK/hktmk-site/scss/photo.scss */
+a.dropdown-item:hover {
+  background-color: #F5F5F5;
+}
+
+/* line 138, D:/HKTMK/hktmk-site/scss/photo.scss */
+a.dropdown-item:active, a.dropdown-item:focus {
+  background-color: #fd669a;
+}
+
+/* line 115, D:/HKTMK/hktmk-site/scss/photo.scss */
+a.dropdown-item.dd-item-current {
+  color: white;
+}
+
+/* line 117, D:/HKTMK/hktmk-site/scss/photo.scss */
+a.dropdown-item.dd-item-current:visited {
+  color: white;
+}
+
+/* line 120, D:/HKTMK/hktmk-site/scss/photo.scss */
+a.dropdown-item.dd-item-current:hover {
+  color: #69628D;
+}
+
+/* line 123, D:/HKTMK/hktmk-site/scss/photo.scss */
+a.dropdown-item.dd-item-current:active, a.dropdown-item.dd-item-current:focus {
+  color: white;
+}
+
+/* line 130, D:/HKTMK/hktmk-site/scss/photo.scss */
+a.dropdown-item.dd-item-current {
+  background-color: #fd669a;
+}
+
+/* line 132, D:/HKTMK/hktmk-site/scss/photo.scss */
+a.dropdown-item.dd-item-current:visited {
+  background-color: #fd669a;
+}
+
+/* line 135, D:/HKTMK/hktmk-site/scss/photo.scss */
+a.dropdown-item.dd-item-current:hover {
+  background-color: #F5F5F5;
+}
+
+/* line 138, D:/HKTMK/hktmk-site/scss/photo.scss */
+a.dropdown-item.dd-item-current:active, a.dropdown-item.dd-item-current:focus {
+  background-color: #fd669a;
+}
+
+/* line 704, D:/HKTMK/hktmk-site/scss/photo.scss */
+a.contact-info {
+  text-decoration: none;
+}
+
+/* line 708, D:/HKTMK/hktmk-site/scss/photo.scss */
+a.social-icon, a.pagi-link, a.pseudo-dropdown-toggle {
+  text-decoration: none;
+}
+
+/* line 115, D:/HKTMK/hktmk-site/scss/photo.scss */
+a.social-icon, a.pagi-link, a.pseudo-dropdown-toggle {
+  color: #69628D;
+}
+
+/* line 117, D:/HKTMK/hktmk-site/scss/photo.scss */
+a.social-icon:visited, a.pagi-link:visited, a.pseudo-dropdown-toggle:visited {
+  color: #69628D;
+}
+
+/* line 120, D:/HKTMK/hktmk-site/scss/photo.scss */
+a.social-icon:hover, a.pagi-link:hover, a.pseudo-dropdown-toggle:hover {
+  color: #bb81fd;
+}
+
+/* line 123, D:/HKTMK/hktmk-site/scss/photo.scss */
+a.social-icon:active, a.social-icon:focus, a.pagi-link:active, a.pagi-link:focus, a.pseudo-dropdown-toggle:active, a.pseudo-dropdown-toggle:focus {
+  color: #fd669a;
+}
+
+/* line 713, D:/HKTMK/hktmk-site/scss/photo.scss */
+a.dropdown-toggle {
+  text-decoration: none;
+}
+
+/* line 115, D:/HKTMK/hktmk-site/scss/photo.scss */
+a.dropdown-toggle {
+  color: #69628D;
+}
+
+/* line 117, D:/HKTMK/hktmk-site/scss/photo.scss */
+a.dropdown-toggle:visited {
+  color: #69628D;
+}
+
+/* line 120, D:/HKTMK/hktmk-site/scss/photo.scss */
+a.dropdown-toggle:hover {
+  color: #bb81fd;
+}
+
+/* line 123, D:/HKTMK/hktmk-site/scss/photo.scss */
+a.dropdown-toggle:active, a.dropdown-toggle:focus {
+  color: #69628D;
+}
+
+/* line 718, D:/HKTMK/hktmk-site/scss/photo.scss */
+.dropdown.show .dropdown-toggle {
+  color: #fd669a;
+}
+
+/* line 722, D:/HKTMK/hktmk-site/scss/photo.scss */
+a.post-tag {
+  text-decoration: none;
+  border-bottom: 0.188em dotted;
+}
+
+/* line 115, D:/HKTMK/hktmk-site/scss/photo.scss */
+a.post-tag {
+  color: #69628D;
+}
+
+/* line 117, D:/HKTMK/hktmk-site/scss/photo.scss */
+a.post-tag:visited {
+  color: #69628D;
+}
+
+/* line 120, D:/HKTMK/hktmk-site/scss/photo.scss */
+a.post-tag:hover {
+  color: #bb81fd;
+}
+
+/* line 123, D:/HKTMK/hktmk-site/scss/photo.scss */
+a.post-tag:active, a.post-tag:focus {
+  color: #fd669a;
+}
+
+/* line 728, D:/HKTMK/hktmk-site/scss/photo.scss */
+svg.social-icon {
+  text-decoration: none;
+}
+
+/* line 115, D:/HKTMK/hktmk-site/scss/photo.scss */
+svg.social-icon {
+  color: #69628D;
+}
+
+/* line 117, D:/HKTMK/hktmk-site/scss/photo.scss */
+svg.social-icon:visited {
+  color: #69628D;
+}
+
+/* line 120, D:/HKTMK/hktmk-site/scss/photo.scss */
+svg.social-icon:hover {
+  color: #bb81fd;
+}
+
+/* line 123, D:/HKTMK/hktmk-site/scss/photo.scss */
+svg.social-icon:active, svg.social-icon:focus {
+  color: #fd669a;
+}
+
+/* line 145, D:/HKTMK/hktmk-site/scss/photo.scss */
+svg.social-icon {
+  fill: #69628D;
+}
+
+/* line 147, D:/HKTMK/hktmk-site/scss/photo.scss */
+svg.social-icon:visited {
+  fill: #69628D;
+}
+
+/* line 150, D:/HKTMK/hktmk-site/scss/photo.scss */
+svg.social-icon:hover {
+  fill: #bb81fd;
+}
+
+/* line 153, D:/HKTMK/hktmk-site/scss/photo.scss */
+svg.social-icon:active, svg.social-icon:focus {
+  fill: #fd669a;
+}
+
+/* line 734, D:/HKTMK/hktmk-site/scss/photo.scss */
+a.no-dot-link {
+  border-bottom: none;
+}
+
+/* line 738, D:/HKTMK/hktmk-site/scss/photo.scss */
+p {
+  font-family: "Raleway", sans-serif;
+  line-height: 1.5rem;
+  margin-top: 0.75rem;
+  margin-bottom: 0;
+}
+
+/* line 745, D:/HKTMK/hktmk-site/scss/photo.scss */
+ul, ol {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+/* line 748, D:/HKTMK/hktmk-site/scss/photo.scss */
+ul li, ol li {
+  line-height: 1.5rem;
+}
+
+/* line 751, D:/HKTMK/hktmk-site/scss/photo.scss */
+ul ul, ul ol, ol ul, ol ol {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/* line 756, D:/HKTMK/hktmk-site/scss/photo.scss */
+blockquote {
+  line-height: 1.5rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Headings */
+/* line 762, D:/HKTMK/hktmk-site/scss/photo.scss */
+h1, h2, h3, h4, h5, h6 {
+  /* Change heading typefaces here */
+  font-family: "Nunito", sans-serif;
+  margin-top: 1.5rem;
+  margin-bottom: 0;
+  line-height: 1.5rem;
+}
+
+/* line 769, D:/HKTMK/hktmk-site/scss/photo.scss */
+h1 {
+  font-size: 2.4745rem;
+  line-height: 2.625rem;
+  margin-top: 0rem;
+}
+
+/* line 774, D:/HKTMK/hktmk-site/scss/photo.scss */
+h1.a11y-header {
+  display: none;
+}
+
+/* line 777, D:/HKTMK/hktmk-site/scss/photo.scss */
+h2 {
+  font-size: 2.121rem;
+  line-height: 2.25rem;
+  margin-top: 2.25rem;
+  border-bottom: 0.188em dotted #69628D;
+}
+
+/* line 783, D:/HKTMK/hktmk-site/scss/photo.scss */
+h2.a11y-starlinks {
+  border-bottom: none;
+  display: inline;
+}
+
+/* line 787, D:/HKTMK/hktmk-site/scss/photo.scss */
+h3 {
+  font-size: 1.7675rem;
+  line-height: 1.875rem;
+  margin-top: 1.875rem;
+  border-bottom: 0.188em dotted #BD7AA2;
+}
+
+/* line 793, D:/HKTMK/hktmk-site/scss/photo.scss */
+h4 {
+  font-size: 1.414rem;
+  line-height: 1.5rem;
+  margin-top: 1.5rem;
+  border-bottom: 0.188em dotted #69628D;
+}
+
+/* line 799, D:/HKTMK/hktmk-site/scss/photo.scss */
+h5 {
+  font-size: 1.0605rem;
+  line-height: 1.5rem;
+  margin-top: 1.5rem;
+  border-bottom: 0.188em dotted #BD7AA2;
+}
+
+/* line 805, D:/HKTMK/hktmk-site/scss/photo.scss */
+h6 {
+  font-size: 0.93324rem;
+  line-height: 1.5rem;
+  margin-top: 1.5rem;
+  border-bottom: 0.188em dotted #69628D;
+}
+
+/* line 812, D:/HKTMK/hktmk-site/scss/photo.scss */
+.post-date {
+  font-size: 0.93324rem;
+  line-height: 1.5rem;
+  margin-top: 1.5rem;
+  color: #3E3E3E;
+  font-family: "Nunito", sans-serif;
+}
+
+/* line 820, D:/HKTMK/hktmk-site/scss/photo.scss */
+hr {
+  border-style: none;
+  border-top: dotted 2px #bb81fd;
+}
+
+/* line 825, D:/HKTMK/hktmk-site/scss/photo.scss */
+.social-icons {
+  font-size: 1.5rem;
+  justify-content: space-between;
+  width: 75%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* line 833, D:/HKTMK/hktmk-site/scss/photo.scss */
+.social-icon {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+/* line 838, D:/HKTMK/hktmk-site/scss/photo.scss */
+svg.social-icon {
+  height: 1.5rem;
+}
+
+/* line 842, D:/HKTMK/hktmk-site/scss/photo.scss */
+a.social-icon {
+  display: block;
+}
+
+/* line 846, D:/HKTMK/hktmk-site/scss/photo.scss */
+svg {
+  display: block;
+}
+
+/* Tables */
+/* line 851, D:/HKTMK/hktmk-site/scss/photo.scss */
+table {
+  margin-top: 1.5rem;
+  border-spacing: 0px;
+  border-collapse: collapse;
+}
+
+/* line 856, D:/HKTMK/hktmk-site/scss/photo.scss */
+table td, table th {
+  padding: 5px;
+  line-height: 24px;
+}
+
+/* line 862, D:/HKTMK/hktmk-site/scss/photo.scss */
+.contact-status {
+  margin-top: 1.5rem;
+}
+
+/* line 866, D:/HKTMK/hktmk-site/scss/photo.scss */
+.contact-status2 {
+  font-family: "Nunito", sans-serif;
+  font-weight: 800;
+  font-size: 1.414rem;
+  color: #69628D;
+  display: block;
+  padding-bottom: 0.25em;
+}
+
+/* line 875, D:/HKTMK/hktmk-site/scss/photo.scss */
+.contact-status2, .contact-status3 {
+  text-align: center;
+  display: block;
+  white-space: nowrap;
+}
+
+/* line 881, D:/HKTMK/hktmk-site/scss/photo.scss */
+.work-card {
+  margin-bottom: 1.5rem;
+  border: 1px solid #A9A9A9;
+}
+
+/* line 886, D:/HKTMK/hktmk-site/scss/photo.scss */
+.contact-status3 {
+  margin-bottom: 1.5rem;
+}
+
+/* line 890, D:/HKTMK/hktmk-site/scss/photo.scss */
+.contact-infos {
+  margin-bottom: 0;
+  font-family: "Nunito", sans-serif;
+  font-weight: 800;
+  font-size: 1.414rem;
+  color: #fd669a;
+  padding-bottom: 0.25em;
+  white-space: nowrap;
+  text-align: center;
+}
+
+/* line 115, D:/HKTMK/hktmk-site/scss/photo.scss */
+.contact-info {
+  color: #fd669a;
+}
+
+/* line 117, D:/HKTMK/hktmk-site/scss/photo.scss */
+.contact-info:visited {
+  color: #fd669a;
+}
+
+/* line 120, D:/HKTMK/hktmk-site/scss/photo.scss */
+.contact-info:hover {
+  color: #bb81fd;
+}
+
+/* line 123, D:/HKTMK/hktmk-site/scss/photo.scss */
+.contact-info:active, .contact-info:focus {
+  color: #fd669a;
+}
+
+/* Code blocks */
+/* line 906, D:/HKTMK/hktmk-site/scss/photo.scss */
+code {
+  vertical-align: bottom;
+}
+
+/* Leading paragraph text */
+/* line 912, D:/HKTMK/hktmk-site/scss/photo.scss */
+.lead {
+  font-size: 1.414rem;
+}
+
+/* Hug a the block above you */
+/* line 917, D:/HKTMK/hktmk-site/scss/photo.scss */
+.hug {
+  margin-top: 0;
+}
+
+/* Forms */
+/* line 922, D:/HKTMK/hktmk-site/scss/photo.scss */
+form {
+  position: relative;
+}
+
+/* line 926, D:/HKTMK/hktmk-site/scss/photo.scss */
+input, textarea, button {
+  font-family: "Raleway", sans-serif;
+  font-size: 100%;
+  line-height: 1.5rem;
+  margin-top: 0.75rem;
+  padding: 5px;
+  border-radius: 4px;
+  border: 1px solid #A9A9A9;
+}
+
+/* line 936, D:/HKTMK/hktmk-site/scss/photo.scss */
+input {
+  display: inline-block;
+  width: 100%;
+}
+
+/* line 941, D:/HKTMK/hktmk-site/scss/photo.scss */
+input.msg-container.col-sm {
+  padding: 5px;
+}
+
+/* line 945, D:/HKTMK/hktmk-site/scss/photo.scss */
+textarea {
+  width: 100%;
+  height: 24em;
+  resize: none;
+}
+
+/* line 951, D:/HKTMK/hktmk-site/scss/photo.scss */
+button {
+  width: 100%;
+  cursor: pointer;
+  font-family: "Nunito", sans-serif;
+  font-weight: 800;
+  background-color: #bb81fd;
+  color: white;
+  font-size: 1.0605rem;
+  border: 1px solid #69628D;
+}
+
+/* line 962, D:/HKTMK/hktmk-site/scss/photo.scss */
+.post-img {
+  width: 100%;
+}
+
+/* line 966, D:/HKTMK/hktmk-site/scss/photo.scss */
+.inl-img {
+  width: 75%;
+  margin: 0 auto;
+  display: block;
+}
+
+/* line 972, D:/HKTMK/hktmk-site/scss/photo.scss */
+.about-portrait {
+  margin-top: 0.75rem;
+  width: 100%;
+}
+
+/* line 977, D:/HKTMK/hktmk-site/scss/photo.scss */
+.clearfix {
+  overflow: auto;
+}
+
+/*# sourceMappingURL=../css/photo.map */

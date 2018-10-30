@@ -1,0 +1,979 @@
+/* Copyright 2018 Tamika "HK*TMK" P. All rights reserved. */
+
+/*! Typebase.less v0.1.0 | MIT License */
+
+// Typesetting variables. Edit these!
+$baseFontSize: 16; // in pixels. This would result in 22px on desktop
+$baseLineHeight: 1.5; // how large the line height is as a multiple of font size
+$leading: $baseLineHeight * 1rem;
+
+// Rate of growth for headings
+// I actually like this to be slightly smaller then the leading. Makes for tight headings.
+$scale: 1.414;
+
+$nunito: 'Nunito', sans-serif;
+$raleway: 'Raleway', sans-serif;
+$star-links-padding: 0.188em;
+$cover-text-shadow: 0px 2px 0px rgba(0, 0, 0, 1);
+
+/* Variables */
+$vert-margin: 4vh * (3 / 4);
+$vert-margin2: 2vmin + (2 / 3);
+$horz-margin: 4vw;
+$inner-height: (100vh - ($vert-margin * 2));
+$inner-width: (100vw - ($horz-margin * 2));
+$ele-space: 1.250rem;
+
+$hk-pink: #fd669a;
+$hk-dark-pink: #BD7AA2;
+$hk-purp: #bb81fd;
+$hk-dark-purp: #69628D;
+$hk-platinum: #F7F7F7;
+$hk-silver: #A9A9A9;
+$hk-gray: #3E3E3E;
+$hk-black: #333333;
+
+$hika-bg: url('../img/hk-bg-tile.png');
+
+%center-text {
+  text-align: center;
+}
+
+%margin-horz-center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+%no-r-click {
+  -webkit-user-select: none;  /* Chrome all / Safari all */
+  -moz-user-select: none;     /* Firefox all */
+  -ms-user-select: none;      /* IE 10+ */
+  -o-user-select: none;
+  user-select: none;
+}
+
+%star-spin {
+  transform-origin: 50% 55%;
+}
+
+%card-width {
+  max-width: ($inner-width * 2 / 3);
+  max-height: ($inner-height * 1 / 2);
+}
+
+%logo-fullsize {
+  height: 100%;
+  width: 100%;
+}
+
+%dropdown-nonheader {
+  font-size: $baseFontSize / 16 * 100%;
+  border-bottom: none;
+  font-weight: normal;
+  font-family: $raleway;
+  margin-top: 0;
+}
+
+%port-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+%port-cate-inner {
+  > .inner {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 1em;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    color: white;
+    opacity: 0;
+    -webkit-transition: opacity .5s ease;
+    transition: opacity .5s ease;
+      h2 {
+        margin-top: 0;
+        font-weight: 800;
+        font-size: 0.75 * $scale * 1rem;
+        line-height: 0.75 * $leading;
+      }
+  }
+  > .inner:hover {
+    opacity: 1;
+    -webkit-transition: opacity .5s ease;
+    transition: opacity .5s ease;
+  }
+}
+
+@mixin links ($link, $visited, $hover, $active) {
+  & {
+      color: $link;
+      &:visited {
+          color: $visited;
+      }
+      &:hover {
+          color: $hover;
+      }
+      &:active, &:focus {
+          color: $active;
+      }
+  }
+}
+
+@mixin bglinks ($link, $visited, $hover, $active) {
+  & {
+      background-color: $link;
+      &:visited {
+          background-color: $visited;
+      }
+      &:hover {
+          background-color: $hover;
+      }
+      &:active, &:focus {
+          background-color: $active;
+      }
+  }
+}
+
+@mixin svglinks ($link, $visited, $hover, $active) {
+  & {
+      fill: $link;
+      &:visited {
+          fill: $visited;
+      }
+      &:hover {
+          fill: $hover;
+      }
+      &:active, &:focus {
+          fill: $active;
+      }
+  }
+}
+
+@mixin box-shadow($top, $left, $blur, $color, $inset: false) {
+  @if $inset {
+    -webkit-box-shadow:inset $top $left $blur $color;
+    -moz-box-shadow:inset $top $left $blur $color;
+    box-shadow:inset $top $left $blur $color;
+  } @else {
+    -webkit-box-shadow: $top $left $blur $color;
+    -moz-box-shadow: $top $left $blur $color;
+    box-shadow: $top $left $blur $color;
+  }
+}
+
+@mixin for-phone-only {
+  @media (max-width: 599px) { @content; }
+}
+@mixin for-tablet-portrait-up {
+  @media (min-width: 600px) { @content; }
+}
+@mixin for-tablet-landscape-up {
+  @media (min-width: 900px) { @content; }
+}
+@mixin for-desktop-up {
+  @media (min-width: 1200px) { @content; }
+}
+@mixin for-big-desktop-up {
+  @media (min-width: 1800px) { @content; }
+}
+@mixin over-9000 {
+  @media (min-width: 2000px) { @content; }
+}
+
+/* CSS*/
+/* Content */
+body {
+  background-color: $hk-gray;
+  background-image: $hika-bg;
+  margin: $vert-margin $horz-margin $vert-margin $horz-margin;
+  width: auto;
+  font-family: $raleway;
+  color: $hk-black;
+}
+
+#header {
+}
+
+#header h1 {
+  display: none;
+}
+
+#logo-box {
+  @extend %center-text;
+  @extend %margin-horz-center;
+}
+
+.logo-link {
+  margin: 0 auto;
+  display: inline-block;
+}
+
+#logo-box img {
+  display: block;
+  @extend %no-r-click;
+}
+
+.cover-logo-box {
+  margin-bottom: $vert-margin2;
+}
+
+.page-logo-box {
+  margin-bottom: ($vert-margin2 / 2);
+}
+
+.cover-logo {
+  @extend %logo-fullsize;
+  max-width: ($inner-width * 1 / 2);
+  max-height: ($inner-height * 1 / 4);
+  -o-object-fit: contain;
+    object-fit: contain;
+
+  @include for-tablet-landscape-up {
+    max-width: ($inner-width * 1 / 3);
+    max-height: ($inner-height * 1 / 4);
+  }
+}
+
+.page-logo {
+  @extend %logo-fullsize;
+  max-width: ($inner-width * 3 / 4);
+  box-sizing: border-box;
+
+  @include for-tablet-portrait-up {
+    max-width: ($inner-width * 1.5 / 3);
+  }
+
+  @include for-tablet-landscape-up {
+    max-width: ($inner-width * 1 / 2);
+  }
+
+  @include for-desktop-up {
+    max-width: ($inner-width * 1 / 4);
+  }
+
+  @include for-big-desktop-up {
+    max-width: ($inner-width * 1 / 5);
+  }
+
+}
+
+#cover-site {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: $inner-height;
+}
+
+#cover-content {
+}
+
+.container-fluid {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+#content {
+  background-color: white;
+  padding: $horz-margin;
+  margin: $vert-margin auto $vert-margin auto;
+  @include box-shadow (0px, 2px, 12px, #000000);
+  @include for-desktop-up {
+    padding: $horz-margin * 0.75;
+  }
+}
+
+#cardbox {
+  width: fit-content;
+  top: 0;
+  @extend %margin-horz-center;
+  @extend %center-text;
+  margin-bottom: $vert-margin2;
+}
+
+#card {
+  @extend %center-text;
+  position:relative;
+  width: fit-content;
+ }
+
+ #cardbutton {
+   position: absolute;
+   bottom: 0;
+   right: -1 * ($vert-margin2 * 3) - 1;
+   z-index: 9999999;
+   -webkit-transition: -webkit-transform .6s ease-in-out;
+          transition:          transform .6s ease-in-out;
+   @extend %star-spin;
+   cursor:pointer;
+ }
+
+ #cardbutton:hover {
+   -webkit-transform: rotate(360deg);
+           transform: rotate(360deg);
+   @extend %star-spin;
+ }
+
+ #cardbutton img {
+   position: relative;
+   height: $vert-margin2 * 2.5;
+   display: block;
+   width: auto;
+ }
+
+
+.cardimg {
+  @extend %card-width;
+  display: block;
+  width: auto;
+}
+
+#navbox {
+  height: 100%;
+  width: auto;
+  @extend %margin-horz-center;
+  @extend %center-text;
+}
+
+.cover-nav-box {
+  margin-top: $vert-margin / 2;
+  margin-bottom: $vert-margin2;
+}
+
+.navbar {
+  padding: 0;
+}
+
+.navbar-light .navbar-toggler {
+  margin-top: 0;
+  color: $hk-black;
+  border: 1px solid $hk-silver;
+}
+
+ul.navbar-nav {
+  display: flex;
+  justify-content: space-between;
+  margin-top:0;
+  @extend %margin-horz-center;
+  padding: 1em;
+  background-color: $hk-platinum;
+  border-radius: 0 0 4px 4px;
+  @media (min-width: 768px) {
+    padding: 0;
+    background-color: transparent;
+    border-radius: 0;
+  }
+}
+
+.navbar-nav > li{
+  @media (min-width: 768px) {
+    margin-left:1em;
+    margin-right:1em;
+  }
+}
+
+li.nav-item.dropdown {
+  margin-bottom: 0.5em;
+}
+
+.dropdown, .pseudo-dropdown {
+  border-bottom: $star-links-padding dotted $hk-pink;
+}
+
+.dropdown-toggle, .pseudo-dropdown a {
+  text-decoration: none !important;
+}
+
+.dropdown-toggle h2, .pseudo-dropdown h2{
+  font-size: $baseFontSize / 16 * 100%;
+  margin-top: 0;
+  border-bottom: none;
+  display: inline-block;
+  font-family: $raleway;
+  line-height: 1.5rem;
+}
+
+.dropdown-toggle[aria-expanded="true"]:after {
+  transform: scaleY(-1);
+}
+
+
+/*for the animation
+.dropdown-toggle:after {
+  transition: 0.5s;
+}*/
+
+.dropdown-menu {
+  margin-top: 0.5em;
+  margin-bottom: 1em;
+}
+
+.dropdown-item {
+  padding: 0.25rem 1rem;
+}
+
+h3.dropdown-header {
+  padding: 0.25rem 1rem;
+  margin-top: 0;
+  position: relative;
+  border-bottom: none;
+  color: $hk-gray;
+}
+
+.dropdown-item h3{
+  @extend %dropdown-nonheader;
+}
+
+.dropdown-item h4{
+  @extend %dropdown-nonheader;
+}
+
+.blog-nav {
+  font-size: 1.25 * $scale * 1rem;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+input.search-box {
+  margin-top: 0;
+  display: inline;
+  font-size: .666666 * $scale * 1rem;
+}
+
+.post-tags {
+  margin-top: $leading * 0.5;
+}
+
+.post-tag {
+  margin-right: 0.25rem;
+}
+
+.tag-divider {
+  margin-left: 0.75rem;
+  margin-right: 0.75rem;
+}
+
+.fa-hashtag {
+  margin-right: 0.255em;
+}
+
+.pagi-nav {
+  font-size: 1.75 * $scale * 1rem;
+  margin-top: $leading;
+}
+
+.pagi-left {
+  text-align: left;
+}
+
+.pagi-right {
+  text-align: right;
+}
+
+#port-nav {
+  margin-bottom: $leading;
+}
+
+#port-cover-grid {
+@extend %port-grid;
+  grid-gap: 1.25vw;
+  @include for-phone-only {
+    grid-template-columns: 100%;
+    grid-gap: 0;
+  }
+}
+
+.port-cover-thumb {
+  width: 100%;
+  padding-top: 100%; /* 1:1 Aspect Ratio */
+  position: relative; /* If you want text inside of it */
+  background-image: url('../img/placeholder.png');
+  background-size: contain;
+  @include for-phone-only {
+    padding-top: 50%;
+    background-size: 100% auto;
+    background-position: center;
+  }
+}
+
+span.port-cover-title {
+  position: absolute;
+  bottom: 7.5%;
+  padding-left: 7.5%;
+  right: 7.5%;
+  text-align: right;
+  font-family: $nunito;
+  font-size: 2vw;
+  font-weight: 700;
+  line-height: 2vw;
+  border-bottom: none;
+  @include for-phone-only {
+    font-size: 4vw;
+    line-height: 4vw;
+  }
+  @include for-desktop-up {
+    font-size: 1.5vw;
+    line-height: 1.5vw;
+  }
+  @include over-9000 {
+    font-size: 1.125vw;
+    line-height: 1.125vw;
+  }
+}
+
+#port-cate-grid {
+  @extend %port-grid;
+  grid-gap: 1vw;
+  grid-auto-rows: max-content;
+  grid-auto-flow: row dense;
+  @include for-phone-only {
+    grid-template-columns: 100%;
+    row-gap: $leading;
+    column-gap: 0;
+  }
+}
+
+.port-cate-thumb {
+  background-size: cover;
+  background-position: center;
+}
+
+.port-cate-thumb img{
+  max-width:100%;
+  max-height:100%;
+}
+
+div.port-cate-thumb .inner {
+  background-color: rgba(105,98,141,0.75);
+    h2 {
+      border-bottom: $star-links-padding dotted $hk-pink;
+    }
+}
+div.port-cate-thumb:nth-of-type(even) .inner {
+  background-color: rgba(189,122,162,0.75);
+  h2 {
+    border-bottom: $star-links-padding dotted $hk-dark-purp;
+  }
+}
+
+.port-cate-thumb.pct-port {
+  grid-column-end: span 1;
+  grid-row-start: span 2;
+  position: relative;
+  @include for-phone-only {
+    grid-column-start: 1;
+  }
+  &:before {
+    display: block;
+    content: "";
+    width: 100%;
+    padding-top: (2 / 1) * 100%;
+  }
+  @extend %port-cate-inner;
+}
+
+.port-cate-thumb.pct-land {
+  grid-column-end: span 2;
+  grid-row-end: span 1;
+  position: relative;
+  @include for-phone-only {
+    grid-column-start: 1;
+  }
+  &:before {
+    display: block;
+    content: "";
+    width: 100%;
+    padding-top: (1 / 2) * 100%;
+  }
+  @extend %port-cate-inner;
+}
+
+.port-cate-thumb.pct-sq {
+  grid-row-end: span 1;
+  grid-column-end: span 1;
+  position: relative;
+  @include for-phone-only {
+    grid-column-start: 1;
+  }
+  &:before {
+    display: block;
+    content: "";
+    width: 100%;
+    padding-top: (1 / 1) * 100%;
+  }
+  @extend %port-cate-inner;
+}
+
+#footer {
+  @extend %center-text;
+  width: $inner-width;
+  color: white;
+  text-shadow: 0px 2px 0px rgba(0, 0, 0, 1);
+}
+
+/* Fonts */
+.star-links {
+  font-family: $nunito;
+  font-weight: 800;
+  font-size: $leading;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  display: inline-block;
+  text-shadow: $cover-text-shadow;
+  @include over-9000 {
+    font-size: $leading * 1.5;
+  }
+}
+
+a.cover-links {
+  @include links(white, white, $hk-pink, $hk-purp);
+  text-decoration: none;
+  border-bottom: $star-links-padding dotted;
+}
+
+a.cover-links.cover-links-current {
+  @include links($hk-purp, $hk-purp, $hk-pink, $hk-purp);
+  text-decoration: none;
+  border-bottom: $star-links-padding dotted;
+}
+
+a.link-click:active {
+  transform: translateY(0.125em)
+}
+
+.link-click img:active {
+  transform: translateY(0.333333em)
+}
+
+.star-bullets {
+  display: inline;
+  height: $leading;
+  width: auto;
+  vertical-align: middle;
+  margin-right: 0.5rem;
+  padding-bottom: $star-links-padding;
+  @include over-9000 {
+    height: $leading * 2;
+  }
+}
+
+.oops {
+  color: white;
+  margin-bottom: $vert-margin2;
+}
+
+/* Setup */
+html {
+  /* Change default typefaces here */
+  font-family: serif;
+  font-size: $baseFontSize / 16 * 100%;
+
+  // Make everything look a little nicer in webkit
+  -webkit-font-smoothing: antialiased
+}
+  // -webkit-text-size-adjust: auto
+  // -moz-text-size-adjust: auto
+  // -ms-text-size-adjust: auto
+  // -o-text-size-adjust: auto
+  // text-size-adjust: auto
+
+/* Copy & Lists */
+a {
+  @include links($hk-purp, $hk-purp, $hk-dark-purp, $hk-pink);
+  text-decoration: underline;
+}
+
+a.dropdown-item {
+  @include links($hk-black, $hk-black, $hk-dark-purp, white);
+  @include bglinks(white, white, #F5F5F5, $hk-pink);
+  text-decoration: none;
+}
+
+a.dropdown-item.dd-item-current {
+  @include links(white, white, $hk-dark-purp, white);
+  @include bglinks($hk-pink, $hk-pink, #F5F5F5, $hk-pink);
+}
+
+a.contact-info {
+  text-decoration: none;
+}
+
+a.social-icon, a.pagi-link, a.pseudo-dropdown-toggle{
+  @include links($hk-dark-purp, $hk-dark-purp, $hk-purp, $hk-pink);
+  text-decoration: none;
+}
+
+a.dropdown-toggle, {
+  @include links($hk-dark-purp, $hk-dark-purp, $hk-purp, $hk-dark-purp);
+  text-decoration: none;
+}
+
+.dropdown.show .dropdown-toggle {
+  color: $hk-pink;
+}
+
+a.post-tag {
+  @include links($hk-dark-purp, $hk-dark-purp, $hk-purp, $hk-pink);
+  text-decoration: none;
+  border-bottom: $star-links-padding dotted;
+}
+
+svg.social-icon {
+  @include links($hk-dark-purp, $hk-dark-purp, $hk-purp, $hk-pink);
+  @include svglinks($hk-dark-purp, $hk-dark-purp, $hk-purp, $hk-pink);
+  text-decoration: none;
+}
+
+a.no-dot-link {
+  border-bottom: none;
+}
+
+p {
+  font-family: $raleway;
+  line-height: $leading;
+  margin-top: $leading * 0.5;
+  margin-bottom: 0;
+}
+
+ul, ol {
+  margin-top: $leading;
+  margin-bottom: $leading;
+  li {
+    line-height: $leading;
+  }
+  ul, ol {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+blockquote {
+  line-height: $leading;
+  margin-top: $leading;
+  margin-bottom: $leading;
+}
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  /* Change heading typefaces here */
+  font-family: $nunito;
+  margin-top: $leading;
+  margin-bottom: 0;
+  line-height: $leading;
+}
+h1 {
+  font-size: 1.75 * $scale * 1rem;
+  line-height: 1.75 * $leading;
+  margin-top: 0 * $leading;
+}
+h1.a11y-header {
+  display: none;
+}
+h2 {
+  font-size: 1.50 * $scale * 1rem;
+  line-height: 1.50 * $leading;
+  margin-top: 1.50 * $leading;
+  border-bottom: $star-links-padding dotted $hk-dark-purp;
+}
+h2.a11y-starlinks {
+  border-bottom: none;
+  display: inline;
+}
+h3 {
+  font-size: 1.25 * $scale * 1rem;
+  line-height: 1.25 * $leading;
+  margin-top: 1.25 * $leading;
+  border-bottom: $star-links-padding dotted $hk-dark-pink;
+}
+h4 {
+  font-size: 1 * $scale * 1rem;
+  line-height: 1 * $leading;
+  margin-top: 1 * $leading;
+  border-bottom: $star-links-padding dotted $hk-dark-purp;
+}
+h5 {
+  font-size: 0.75 * $scale * 1rem;
+  line-height: 1 * $leading;
+  margin-top: 1 * $leading;
+  border-bottom: $star-links-padding dotted $hk-dark-pink;
+}
+h6 {
+  font-size: 0.66 * $scale * 1rem;
+  line-height: 1 * $leading;
+  margin-top: 1 * $leading;
+  border-bottom: $star-links-padding dotted $hk-dark-purp;
+}
+
+.post-date {
+  font-size: 0.66 * $scale * 1rem;
+  line-height: 1 * $leading;
+  margin-top: 1 * $leading;
+  color: $hk-gray;
+  font-family: $nunito;
+}
+
+hr {
+  border-style: none;
+  border-top: dotted 2px $hk-purp;
+}
+
+.social-icons {
+  font-size: 1 * $leading;
+  justify-content: space-between;
+  width: 75%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.social-icon {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+svg.social-icon {
+  height: 1 * $leading;
+}
+
+a.social-icon {
+  display: block;
+}
+
+svg {
+  display:block;
+}
+
+/* Tables */
+table {
+  margin-top: $leading;
+  border-spacing: 0px;
+  border-collapse: collapse;
+
+  td, th {
+    padding: 5px;
+    line-height: $baseLineHeight * $baseFontSize - 0px;
+  }
+}
+
+.contact-status {
+  margin-top: $leading;
+}
+
+.contact-status2 {
+  font-family: $nunito;
+  font-weight: 800;
+  font-size: 1 * $scale * 1rem;
+  color: $hk-dark-purp;
+  display: block;
+  padding-bottom: 0.25em;
+}
+
+.contact-status2, .contact-status3 {
+  text-align: center;
+  display: block;
+  white-space: nowrap;
+}
+
+.work-card {
+  margin-bottom: $leading;
+  border: 1px solid $hk-silver;
+}
+
+.contact-status3 {
+  margin-bottom: $leading;
+}
+
+.contact-infos {
+  margin-bottom: 0;
+  font-family: $nunito;
+  font-weight: 800;
+  font-size: 1 * $scale * 1rem;
+  color: $hk-pink;
+  padding-bottom: 0.25em;
+  white-space: nowrap;
+  text-align: center;
+}
+
+.contact-info {
+  @include links($hk-pink, $hk-pink, $hk-purp, $hk-pink)
+}
+
+/* Code blocks */
+code {
+  // Forces text to constrain to the line-height. Not ideal, but works.
+  vertical-align: bottom
+}
+
+/* Leading paragraph text */
+.lead {
+  font-size: $scale * 1rem
+}
+
+/* Hug a the block above you */
+.hug {
+  margin-top: 0
+}
+
+/* Forms */
+form {
+  position: relative;
+}
+
+input, textarea, button {
+  font-family: $raleway;
+  font-size: $baseFontSize / 16 * 100%;
+  line-height: $leading;
+  margin-top: $leading * 0.5;
+  padding: 5px;
+  border-radius: 4px;
+  border:1px solid $hk-silver;
+}
+
+input {
+  display: inline-block;
+  width: 100%;
+}
+
+input.msg-container.col-sm {
+  padding: 5px;
+}
+
+textarea {
+  width: 100%;
+  height: 24em;
+  resize: none;
+}
+
+button {
+  width: 100%;
+  cursor: pointer;
+  font-family: $nunito;
+  font-weight: 800;
+  background-color: $hk-purp;
+  color: white;
+  font-size: 0.75 * $scale * 1rem;
+  border:1px solid $hk-dark-purp;
+}
+
+.post-img {
+  width: 100%;
+}
+
+.inl-img {
+  width: 75%;
+  margin: 0 auto;
+  display: block;
+}
+
+.about-portrait {
+  margin-top: $leading * 0.5;
+  width: 100%;
+}
+
+.clearfix {
+    overflow: auto;
+}
