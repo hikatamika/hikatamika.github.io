@@ -63,7 +63,28 @@
     <div id="content" class="container">
       <div class="container-fluid softLoad">
         <div class="">
-          <iframe class="threejsplaygrnd" src="\bplrty_p5_sketch\index.html" style="width:100%; height:66vh;"></iframe>
+          <script type="application/javascript">
+
+          function resizeIFrameToFitContent( iFrame ) {
+
+              iFrame.width  = iFrame.contentWindow.document.body.scrollWidth;
+              iFrame.height = iFrame.contentWindow.document.body.scrollHeight;
+          }
+
+          window.addEventListener('DOMContentLoaded', function(e) {
+
+              var iFrame = document.getElementById( 'respiframe' );
+              resizeIFrameToFitContent( iFrame );
+
+              // or, to resize all iframes:
+              var iframes = document.querySelectorAll("iframe");
+              for( var i = 0; i < iframes.length; i++) {
+                  resizeIFrameToFitContent( iframes[i] );
+              }
+          } );
+
+          </script>
+          <iframe class="threejsplaygrnd respiframe" src="\bplrty_p5_sketch\index.html" style="width:100%; height:66vh;"></iframe>
           <h1>Proj 3: 3D MeshMash</h1>
           <div class="sketchfab-embed-wrapper"><iframe width="640" height="480" src="https://sketchfab.com/models/9615c2ed69794dbea7718ccee94c9d67/embed" frameborder="0" allow="autoplay; fullscreen; vr" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
 
@@ -88,9 +109,9 @@
           <hr>
         </div>
         <div class="row">
-          <a href="proj2.html" alt="">Prev </a> ||
+          <a href="proj3.html" alt="">Prev </a> ||
           <a href="art74.html" alt="">Home </a> ||
-          <a href="proj4.html" alt="">Next </a>
+          <a href="proj6.html" alt="">Next </a>
         </div>
       </div>
     </div>
